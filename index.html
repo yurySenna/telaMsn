@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Msn</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(219, 215, 207);
+            font-family: Tahoma, Geneva, sans-serif;
+            overflow: hidden;
+        }
+
+
+        header {
+            background-color: rgb(219, 215, 207);
+            width: 100vw;
+            height: 60px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+            color: white;
+            margin-top: 5px;
+            gap: 5px;
+            height: 30px;
+            align-items: center;
+            
+            background: linear-gradient(to right,
+                    #26569e 30%,
+                    #26569e 5%,
+                    #aad7f7 100%);
+
+        }
+
+        .header > img {
+            width: 30px;
+            height: 30px;
+
+        }
+
+        .maxi {
+            display: flex;     
+            gap: 2px;
+            justify-content: flex-end;
+            flex: auto;
+            margin-right: 5px;
+        }
+
+        .minimizar {
+            width: 22px;
+            height: 22px;
+            background-color: rgb(219, 215, 207);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+            img {
+                height: 18px;
+                width: 18px;
+                background-color: rgb(219, 215, 207);
+            }
+        }
+
+        .menos {
+            margin-top: 11px;
+            background-clip: text;  
+
+        }
+
+        nav {
+            display: flex;
+            gap: 10px;
+
+        }
+
+        nav>a {
+            text-decoration: none;
+            margin: 5px;
+            color: rgba(0, 0, 0, 0.897);
+            font-size: 18px;
+            
+        }
+
+        .cont {
+            display: flex;
+            align-items: center;
+            margin-top: -15px;
+            color: #26569e;
+            
+            
+            img {
+                flex-direction: row;
+                width: 60px;
+                margin: 5px;
+            }
+        }
+
+        .icon {
+            width: 23px;
+            height: 23px;
+            border-radius: 150%;
+            border: 1px solid #25354e;
+            box-shadow: 3px 3px 3px #afd0f3, -2px -2px 3px #abd0f5;
+            background-clip: text;
+            display: flex;
+            margin: 3px;
+            cursor: pointer;
+
+            background: linear-gradient(to bottom,
+                    #e1edfd 30%,
+                    #d2e0f5 5%,
+                    #d0e4f5 80%);
+
+            img {
+                width: 40px;
+                margin: 0;
+            }
+        }
+    
+
+        main {
+            height: 100%;
+            margin: 5px;
+            border-radius: 10px;
+            border: 1px solid #0a121f2d;
+
+            background: linear-gradient(to bottom,
+                    #6994c669 0%,
+                    #d5e0f4 5%,
+                    #ffffff 100%);
+            margin: 0;        
+        }
+
+        .formu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+                width: 140px;
+                border: 2px solid rgba(0, 0, 0, 0.164);
+                border-radius: 8px;
+                margin-bottom: 10px;
+            }
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        #campo {
+            width: 240px;
+            margin-right: -1px;  
+        }
+
+        input,
+        select {
+            height: 35px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.432);
+            border: 1px solid #25354e;
+        }
+
+        #senha {
+            width: 265px;
+        }
+
+        select#none {
+            border: none;
+            background-color: rgb(237, 240, 250);
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="header">
+          <img src="img/icon.png" alt="icon">
+          <h3>MSN Messenger</h3>
+
+          <div class="maxi">
+              <div class="minimizar">
+                <img src="img/menos.png" alt="" class="menos">
+              </div>
+              <div class="minimizar">
+                <img src="img/maximizar.png" alt="">
+              </div>
+              <div class="minimizar">
+                <img src="img/marca-cruzada.png" alt="">
+              </div>
+          </div>
+    
+        </div>
+            <nav>
+                <a href="">File</a>
+                <a href="">Contacts</a>
+                <a href="">Actions</a>
+                <a href="">Tools</a>
+                <a href="">Help</a>
+                
+            </nav>
+    </header>
+    <main>
+        <div class="cont">
+            <div class="icon"><img src="img/setta.png" alt=""></div>
+            <!-- <div class="circle">^</div> -->
+            <img src="img/nome-msn.png" alt="">
+            <h3>Messenger</h3>
+        </div>
+        <div class="formu">
+            <img src="img/msn3.png" alt="">
+
+            <form action="">
+                <label for="">E-mail address:</label><br>
+                <input type="email" name="" id="campo">
+                <select name="" id=""></select><br>
+
+                <label for="">Password:</label><br>
+                <input type="password" name="" id="senha"><br>
+                <label for="">Status:</label>
+                <select name="" id="none">
+                    <option value="">Online</option>
+                    <option value="">Offline</option>
+
+                </select>
+
+            </form>
+        </div>
+    </main>
+
+</body>
+
+</html>
