@@ -10,14 +10,16 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Tahoma, Geneva, sans-serif;
+            
+            
         }
 
         body {
             width: 100vw;
             height: 100vh;
             background-color: rgb(219, 215, 207);
-            font-family: Tahoma, Geneva, sans-serif;
-            overflow: hidden;
+            color: rgb(2, 2, 46);
         }
 
 
@@ -36,7 +38,7 @@
             gap: 5px;
             height: 30px;
             align-items: center;
-            
+
             background: linear-gradient(to right,
                     #26569e 30%,
                     #26569e 5%,
@@ -44,14 +46,14 @@
 
         }
 
-        .header > img {
+        .header>img {
             width: 30px;
             height: 30px;
 
         }
 
         .maxi {
-            display: flex;     
+            display: flex;
             gap: 2px;
             justify-content: flex-end;
             flex: auto;
@@ -65,7 +67,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            
+
 
             img {
                 height: 18px;
@@ -76,7 +78,7 @@
 
         .menos {
             margin-top: 11px;
-            background-clip: text;  
+            background-clip: text;
 
         }
 
@@ -91,16 +93,16 @@
             margin: 5px;
             color: rgba(0, 0, 0, 0.897);
             font-size: 18px;
-            
+
         }
 
         .cont {
             display: flex;
             align-items: center;
             margin-top: -15px;
-            color: #26569e;
-            
-            
+            /* color: #26569e; */
+
+
             img {
                 flex-direction: row;
                 width: 60px;
@@ -129,10 +131,9 @@
                 margin: 0;
             }
         }
-    
+
 
         main {
-            height: 100%;
             margin: 5px;
             border-radius: 10px;
             border: 1px solid #0a121f2d;
@@ -141,20 +142,20 @@
                     #6994c669 0%,
                     #d5e0f4 5%,
                     #ffffff 100%);
-            margin: 0;        
+            margin: 0;
         }
 
         .formu {
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
 
-            img {
-                width: 140px;
-                border: 2px solid rgba(0, 0, 0, 0.164);
-                border-radius: 8px;
-                margin-bottom: 10px;
-            }
+        .formu>img {
+            width: 140px;
+            border: 2px solid rgba(0, 0, 0, 0.164);
+            border-radius: 8px;
+            margin-bottom: 10px;
         }
 
         label {
@@ -163,15 +164,16 @@
 
         #campo {
             width: 240px;
-            margin-right: -1px;  
+            margin-right: -1px;
         }
 
-        input,
+        form > input,
         select {
             height: 35px;
             margin-bottom: 10px;
             border: 1px solid rgba(0, 0, 0, 0.432);
             border: 1px solid #25354e;
+
         }
 
         #senha {
@@ -180,8 +182,77 @@
 
         select#none {
             border: none;
-            background-color: rgb(237, 240, 250);
+            background-color: #d5e0f417;
             font-size: 16px;
+            
+        }
+
+        .check {
+            font-size: 15px;
+            margin-bottom: 30px;
+        
+        }
+
+        button {
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            font-weight: bolder;
+            font-family: Tahoma, Geneva, sans-serif;
+            border: 2px solid black;
+            margin-right: 40px;
+            margin-bottom: 50px;
+            color: rgb(1, 1, 43);
+            background: linear-gradient(to top,
+                    #f8a341 7%,
+                    #dce9f7 3%,
+                    #fdfef8 50%);
+            box-shadow: 3px 3px 3px #0213244d, -2px -2px 3px #02132473;  
+        }
+
+        button:hover {
+            cursor: pointer;
+            transform: translateY(1px);
+            box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+
+        }
+
+        footer {
+            display: flex;
+            flex-direction: row;
+            gap: 250px;
+            
+            margin-top: 50px;
+            font-weight: bold;
+
+            a {
+                color: rgb(2, 2, 46);
+                line-height: 2;
+                font-size: 14px;
+            }
+        }
+
+        .img-container {
+            position: relative;
+            width: 200px;
+            height: 150px;
+        }
+         .link {
+            position: absolute;
+            bottom: 70px;
+            right: 15px;
+            z-index: 2;
+         }
+
+        .img-link {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: auto;
+            z-index: 1;
+            opacity: 0.3;
+
         }
     </style>
 
@@ -190,35 +261,37 @@
 <body>
     <header>
         <div class="header">
-          <img src="img/icon.png" alt="icon">
-          <h3>MSN Messenger</h3>
+            <img src="img/icon.png" alt="icon">
+            <h3>MSN Messenger</h3>
 
-          <div class="maxi">
-              <div class="minimizar">
-                <img src="img/menos.png" alt="" class="menos">
-              </div>
-              <div class="minimizar">
-                <img src="img/maximizar.png" alt="">
-              </div>
-              <div class="minimizar">
-                <img src="img/marca-cruzada.png" alt="">
-              </div>
-          </div>
-    
+            <div class="maxi">
+                <div class="minimizar">
+                    <img src="img/menos.png" alt="" class="menos">
+                </div>
+                <div class="minimizar">
+                    <img src="img/maximizar.png" alt="">
+                </div>
+                <div class="minimizar">
+                    <img src="img/marca-cruzada.png" alt="">
+                </div>
+            </div>
+
         </div>
-            <nav>
-                <a href="">File</a>
-                <a href="">Contacts</a>
-                <a href="">Actions</a>
-                <a href="">Tools</a>
-                <a href="">Help</a>
-                
-            </nav>
+        <nav>
+            <a href="">File</a>
+            <a href="">Contacts</a>
+            <a href="">Actions</a>
+            <a href="">Tools</a>
+            <a href="">Help</a>
+
+        </nav>
     </header>
     <main>
         <div class="cont">
-            <div class="icon"><img src="img/setta.png" alt=""></div>
-            <!-- <div class="circle">^</div> -->
+            <div class="icon">
+                <img src="img/setta.png" alt="">
+            </div>
+
             <img src="img/nome-msn.png" alt="">
             <h3>Messenger</h3>
         </div>
@@ -236,11 +309,28 @@
                 <select name="" id="none">
                     <option value="">Online</option>
                     <option value="">Offline</option>
+                </select><br>
 
-                </select>
-
+                <div class="check">
+                    <input type="checkbox" name="" id="">
+                    Remember Me<br>
+                    <input type="checkbox" name="" id="">
+                    Remember my Password<br>
+                    <input type="checkbox" name="" id="">
+                    Sign me in automatically
+                </div>
             </form>
-        </div>
+            <button>Sign In</button>
+            <footer>
+                <div>
+                    <a href="">Forgot your password?</a><br>
+                    <a href="">Service Status</a>
+                </div>
+                <div class="img-container">
+                <a class="link" href="">Get a new account</a>
+                <img class="img-link" src="img/ms2.png" alt="">
+                </div>
+            </footer>
     </main>
 
 </body>
