@@ -20,6 +20,7 @@
             height: 100vh;
             background-color: rgb(219, 215, 207);
             color: rgb(2, 2, 46);
+            
         }
 
 
@@ -137,6 +138,8 @@
             margin: 5px;
             border-radius: 10px;
             border: 1px solid #0a121f2d;
+            width: 100vw;
+        
 
             background: linear-gradient(to bottom,
                     #6994c669 0%,
@@ -220,7 +223,8 @@
         footer {
             display: flex;
             flex-direction: row;
-            gap: 250px;
+            gap: 200px;
+            
             
             margin-top: 50px;
             font-weight: bold;
@@ -253,6 +257,14 @@
             z-index: 1;
             opacity: 0.3;
 
+        }
+
+       @media (max-width: 768px) {
+        footer {
+             gap: 50px;
+
+        }
+            
         }
     </style>
 
